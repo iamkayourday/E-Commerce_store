@@ -56,7 +56,7 @@ const Home = () => {
         </div>
 
         {/* Scrollable Category Row */}
-        <div className="flex overflow-x-auto gap-4 pb-2">
+        <div className="flex overflow-x-auto gap-4 pb-2 no-scrollbar">
           {/* Shirt */}
           <div className="flex flex-col items-center flex-shrink-0">
             <div className="bg-[#f7f2ed] p-5 rounded-full">
@@ -125,7 +125,7 @@ const Home = () => {
       </div>
 
       {/* Product Filters */}
-      <div className="flex overflow-x-auto gap-2 mb-6">
+      <div className="flex overflow-x-auto gap-2 mb-6 no-scrollbar">
         {["All", "Newest", "Popular", "Men", "Women"].map((filter) => (
           <button
             key={filter}
@@ -140,6 +140,15 @@ const Home = () => {
           </button>
         ))}
       </div>
+      <style jsx>{`
+        .no-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+        .no-scrollbar {
+          -ms-overflow-style: none; /* Internet Explorer 10+ */
+          scrollbar-width: none; /* Firefox */
+        }
+      `}</style>
     </div>
   );
 };
