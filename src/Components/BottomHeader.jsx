@@ -6,7 +6,7 @@ const BottomHeader = () => {
   const location = useLocation(); // Get the current route location
 
   return (
-    <div className="fixed bottom-4 left-4 right-4 bg-[#1f2029] rounded-full shadow-lg border-t border-gray-200">
+    <div className="fixed bottom-4 left-4 right-4 bg-[#1f2029] rounded-full shadow-lg border-t border-gray-200 z-50">
       <div className="flex justify-around items-center p-5">
         {/* Home */}
         <Link
