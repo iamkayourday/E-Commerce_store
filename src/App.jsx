@@ -7,6 +7,7 @@ import Favorites from './Pages/Favorites';
 import Messages from './Pages/Messages';
 import Profile from './Pages/Profile';
 import Splash from './Components/Splash';
+import ProductDetails from './Components/ProductDetails';
 
 function App() {
   const [showSplash, setShowSplash] = useState(true);
@@ -33,6 +34,7 @@ function App() {
               <Route path="/favorites" element={<Favorites />} />
               <Route path="/messages" element={<Messages />} />
               <Route path="/profile" element={<Profile />} />
+              <Route path="/details/:id" element={<ProductDetails />} />
             </Routes>
           </div>
           <BottomHeader />

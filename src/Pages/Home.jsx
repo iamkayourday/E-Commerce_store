@@ -9,6 +9,7 @@ import {
   FaShoePrints,
 } from "react-icons/fa";
 import { GiMonclerJacket, GiArmoredPants, GiClothes } from "react-icons/gi";
+import ProductList from "../Components/ProductList";
 
 const Home = () => {
   const [activeFilter, setActiveFilter] = useState("All"); // State to track active filter
@@ -149,6 +150,8 @@ const Home = () => {
           scrollbar-width: none; /* Firefox */
         }
       `}</style>
+      {/* Pass activeFilter to ProductList */}
+      <ProductList activeFilter={activeFilter} />
     </div>
   );
 };
