@@ -8,13 +8,34 @@ import Messages from "./Pages/Messages";
 import Profile from "./Pages/Profile";
 import Splash from "./Components/Splash";
 import ProductDetails from "./Components/ProductDetails";
+import SignIn from "./Auth/SignIn";
+import CreateAccount from "./Auth/CreateAccount";
+import VerifyCode from "./Auth/VerifyCode";
+import NewPassword from "./Auth/NewPassword";
+import CompleteProfile from "./Auth/CompleteProfile";
+import InviteFriends from "./Pages/Profile/InviteFriends";
+import PrivacyPolicy from "./Pages/Profile/PrivacyPolicy";
+import PaymentMethods from "./Pages/Profile/paymentMethods";
+import Orders from "./Pages/Profile/Orders";
+import Settings from  "./Pages/Profile/Settings";
+import ProtectedRoute from "./Components/ProtectedRoutes"; // Import the ProtectedRoute component
 
 // Layout Component
 function Layout({ children }) {
   const location = useLocation();
-  
+
   // Routes where BottomHeader should be hidden
-  const hideBottomHeaderRoutes = ["/cart"]; 
+  const hideBottomHeaderRoutes = [
+    "/cart",
+    "/sign-in",
+    "/sign-up",
+    "/verification",
+    "/password",
+    "/complete-verification",
+    "/invite-friends",
+    "/privacy-policy",
+    "/payment-method",
+  ];
 
   return (
     <>
@@ -45,12 +66,32 @@ function App() {
       ) : (
         <Layout>
           <Routes>
+            {/* Public Routes */}
             <Route path="/" element={<Home />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/favorites" element={<Favorites />} />
             <Route path="/messages" element={<Messages />} />
-            <Route path="/profile" element={<Profile />} />
             <Route path="/details/:id" element={<ProductDetails />} />
+
+            {/* Authentication Routes */}
+            <Route path="/sign-in" element={<SignIn />} />
+            <Route path="/sign-up" element={<CreateAccount />} />
+            <Route path="/verification" element={<VerifyCode />} />
+            <Route path="/password" element={<NewPassword />} />
+            <Route path="/complete-verification" element={<CompleteProfile />} />
+
+            {/* Protected Routes */}
+            <Route element={<ProtectedRoute />}>
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/invite-friends" element={<InviteFriends />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+              <Route path="/payment-method" element={<PaymentMethods />} />
+              <Route path="/my-orders" element={<Orders />} />
+              <Route path="/settings" element={<Settings />} />
+            </Route>
+
+            {/* Fallback Route (e.g., 404 Not Found) */}
+            <Route path="*" element={<div>404 Not Found</div>} />
           </Routes>
         </Layout>
       )}
