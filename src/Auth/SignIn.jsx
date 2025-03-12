@@ -27,7 +27,7 @@ const SignIn = () => {
       alert("Sign in successful!");
   
       // Save user data to localStorage
-      localStorage.setItem("userProfile", JSON.stringify({ email, name: "User" }));
+      // localStorage.setItem("userProfile", JSON.stringify({ email, name: "User" }));
   
       navigate("/"); // Redirect to the home page or dashboard
     } else {
