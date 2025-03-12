@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "title": "Brown Jacket",
+    "price": 83.97,
+    "category": "jacket",
+    "subcategory": "men",
+    "rating": 4.5,
+    "description": "A comfortable and stylish casual jacket, perfect for everyday wear.",
+    "mainImage": "images/mens_jacket_main.jpg",
+    "detailImages": [
+      "images/mens_jacket_1.jpg",
+      "images/mens_jacket_2.jpg",
+      "images/mens_jacket_3.jpg"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Brown Suit",
+    "price": 120,
+    "category": "shirt",
+    "subcategory": "men",
+    "rating": 4.7,
+    "description": "A sleek and professional suit for formal occasions.",
+    "mainImage": "images/mens_suit_main.jpg",
+    "detailImages": [
+      "images/mens_suit_1.jpg",
+      "images/mens_suit_2.jpg",
+      "images/mens_suit_3.jpg"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Women's Leather Jacket",
+    "price": 89.99,
+    "category": "jacket",
+    "subcategory": "women",
+    "rating": 4.8,
+    "description": "A premium leather jacket with a sleek and modern design.",
+    "mainImage": "images/womens_jacket_main.jpg",
+    "detailImages": [
+      "images/womens_jacket_1.jpg",
+      "images/womens_jacket_2.jpg",
+      "images/womens_jacket_3.jpg"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Yellow Shirt",
+    "price": 39.99,
+    "category": "shirt",
+    "subcategory": "women",
+    "rating": 4.6,
+    "description": "A vibrant yellow shirt for a fresh and stylish look.",
+    "mainImage": "images/womens_shirt_main.jpg",
+    "detailImages": [
+      "images/womens_shirt_1.jpg",
+      "images/womens_shirt_2.jpg",
+      "images/womens_shirt_3.jpg"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Men's Hoodie",
+    "price": 49.99,
+    "category": "jacket",
+    "subcategory": "men",
+    "rating": 4.9,
+    "description": "A trendy and cozy hoodie that's a hit among men of all ages.",
+    "mainImage": "images/mens_hoodie_main.jpg",
+    "detailImages": [
+      "images/mens_hoodie_1.jpg",
+      "images/mens_hoodie_2.jpg",
+      "images/mens_hoodie_3.jpg"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Women's Dress",
+    "price": 59.99,
+    "category": "dress",
+    "subcategory": "women",
+    "rating": 4.7,
+    "description": "An elegant dress perfect for any occasion.",
+    "mainImage": "images/womens_dress_main.jpg",
+    "detailImages": [
+      "images/womens_dress_1.jpg",
+      "images/womens_dress_2.jpg",
+      "images/womens_dress_3.jpg"
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Men's Jeans",
+    "price": 69.99,
+    "category": "pants",
+    "subcategory": "men",
+    "rating": 4.5,
+    "description": "Classic and versatile denim jeans with a flattering fit.",
+    "mainImage": "images/mens_jeans_main.jpg",
+    "detailImages": [
+      "images/mens_jeans_1.jpg",
+      "images/mens_jeans_2.jpg",
+      "images/mens_jeans_3.jpg"
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Women's Skirt",
+    "price": 45.99,
+    "category": "dress",
+    "subcategory": "women",
+    "rating": 4.4,
+    "description": "A stylish and comfortable skirt for everyday wear.",
+    "mainImage": "images/womens_skirt_main.jpg",
+    "detailImages": [
+      "images/womens_skirt_1.jpg",
+      "images/womens_skirt_2.jpg",
+      "images/womens_skirt_3.jpg"
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Men's Sneakers",
+    "price": 79.99,
+    "category": "shoes",
+    "subcategory": "men",
+    "rating": 4.8,
+    "description": "Comfortable and durable sneakers for daily use.",
+    "mainImage": "images/mens_sneakers_main.jpg",
+    "detailImages": [
+      "images/mens_sneakers_1.jpg",
+      "images/mens_sneakers_2.jpg",
+      "images/mens_sneakers_3.jpg"
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Women's Heels",
+    "price": 99.99,
+    "category": "shoes",
+    "subcategory": "women",
+    "rating": 4.7,
+    "description": "Elegant heels for a sophisticated look.",
+    "mainImage": "images/womens_heels_main.jpg",
+    "detailImages": [
+      "images/womens_heels_1.jpg",
+      "images/womens_heels_2.jpg",
+      "images/womens_heels_3.jpg"
+    ]
+  }
+]
