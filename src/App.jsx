@@ -20,6 +20,12 @@ import Orders from "./Pages/Profile/Orders";
 import Settings from  "./Pages/Profile/Settings";
 import ProtectedRoute from "./Components/ProtectedRoutes"; // Import the ProtectedRoute component
 import MyProfile from "./Pages/Profile/MyProfile";
+import Shipping from "./Checkout/Shipping";
+import ShippingOpt from "./Checkout/ShippingOpt";
+import Checkout from "./Checkout/Checkout";
+import Payment from "./Checkout/Payment";
+import AddCard from "./Checkout/AddCard";
+import Success from "./Checkout/Success";
 
 // Layout Component
 function Layout({ children }) {
@@ -36,6 +42,12 @@ function Layout({ children }) {
     "/invite-friends",
     "/privacy-policy",
     "/payment-method",
+    "/shipping-address",
+    "/shipping-option",
+    "/checkout",
+    "/payment",
+    "/add-card",
+    "/success",
   ];
 
   return (
@@ -91,6 +103,14 @@ function App() {
               <Route path="/settings" element={<Settings />} />
               <Route path="/your-profile" element={<MyProfile/>} />
             </Route>
+
+            {/* Checkout */}
+            <Route path="/shipping-address" element={<Shipping />} />
+            <Route path="/shipping-option" element={<ShippingOpt />} />
+            <Route path="/checkout" element={<Checkout />} />
+            <Route path="/payment" element={<Payment />} />
+            <Route path="/add-card" element={<AddCard />} />
+            <Route path="/success" element={<Success />} />
 
             {/* Fallback Route (e.g., 404 Not Found) */}
             <Route path="*" element={<div>404 Not Found</div>} />
