@@ -11,7 +11,7 @@ import {
 import { GiMonclerJacket, GiArmoredPants, GiClothes } from "react-icons/gi";
 import ProductList from "../Components/ProductList";
 
-const Home = () => {
+const Home = ({ favorites, toggleFavorite }) => {
   const [activeFilter, setActiveFilter] = useState("All"); // State to track active filter
 
   return (
@@ -151,7 +151,7 @@ const Home = () => {
         }
       `}</style>
       {/* Pass activeFilter to ProductList */}
-      <ProductList activeFilter={activeFilter} />
+      <ProductList favorites={favorites} toggleFavorite={toggleFavorite} activeFilter="All" />
     </div>
   );
 };
