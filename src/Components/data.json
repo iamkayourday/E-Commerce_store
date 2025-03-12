@@ -7,11 +7,17 @@
     "subcategory": "men",
     "rating": 4.5,
     "description": "A comfortable and stylish casual jacket, perfect for everyday wear.",
-    "mainImage": "images/mens_jacket_main.jpg",
+    "mainImage": "/images/mens_jacket_main.jpg",
     "detailImages": [
-      "images/mens_jacket_1.jpg",
-      "images/mens_jacket_2.jpg",
-      "images/mens_jacket_3.jpg"
+      "/images/mens_jacket_main.jpg",
+      "/images/mens_jacket_2.jpg",
+      "/images/mens_jacket_main.jpg",
+      "/images/mens_jacket_2.jpg",
+      "/images/mens_jacket_main.jpg",
+      "/images/mens_jacket_2.jpg",
+      "/images/mens_jacket_main.jpg",
+      "/images/mens_jacket_2.jpg",
+      "/images/mens_jacket_3.jpg"
     ]
   },
   {
@@ -24,9 +30,15 @@
     "description": "A sleek and professional suit for formal occasions.",
     "mainImage": "images/mens_suit_main.jpg",
     "detailImages": [
-      "images/mens_suit_1.jpg",
-      "images/mens_suit_2.jpg",
-      "images/mens_suit_3.jpg"
+      "/images/mens_jacket_main.jpg",
+      "/images/mens_jacket_2.jpg",
+      "/images/mens_jacket_main.jpg",
+      "/images/mens_jacket_2.jpg",
+      "/images/mens_jacket_main.jpg",
+      "/images/mens_jacket_2.jpg",
+      "/images/mens_jacket_main.jpg",
+      "/images/mens_jacket_2.jpg",
+      "/images/mens_jacket_3.jpg"
     ]
   },
   {
@@ -39,9 +51,15 @@
     "description": "A premium leather jacket with a sleek and modern design.",
     "mainImage": "images/womens_jacket_main.jpg",
     "detailImages": [
-      "images/womens_jacket_1.jpg",
-      "images/womens_jacket_2.jpg",
-      "images/womens_jacket_3.jpg"
+      "/images/mens_jacket_main.jpg",
+      "/images/mens_jacket_2.jpg",
+      "/images/mens_jacket_main.jpg",
+      "/images/mens_jacket_2.jpg",
+      "/images/mens_jacket_main.jpg",
+      "/images/mens_jacket_2.jpg",
+      "/images/mens_jacket_main.jpg",
+      "/images/mens_jacket_2.jpg",
+      "/images/mens_jacket_3.jpg"
     ]
   },
   {
@@ -54,9 +72,15 @@
     "description": "A vibrant yellow shirt for a fresh and stylish look.",
     "mainImage": "images/womens_shirt_main.jpg",
     "detailImages": [
-      "images/womens_shirt_1.jpg",
-      "images/womens_shirt_2.jpg",
-      "images/womens_shirt_3.jpg"
+      "/images/mens_jacket_main.jpg",
+      "/images/mens_jacket_2.jpg",
+      "/images/mens_jacket_main.jpg",
+      "/images/mens_jacket_2.jpg",
+      "/images/mens_jacket_main.jpg",
+      "/images/mens_jacket_2.jpg",
+      "/images/mens_jacket_main.jpg",
+      "/images/mens_jacket_2.jpg",
+      "/images/mens_jacket_3.jpg"
     ]
   },
   {
@@ -69,9 +93,15 @@
     "description": "A trendy and cozy hoodie that's a hit among men of all ages.",
     "mainImage": "images/mens_hoodie_main.jpg",
     "detailImages": [
-      "images/mens_hoodie_1.jpg",
-      "images/mens_hoodie_2.jpg",
-      "images/mens_hoodie_3.jpg"
+      "/images/mens_jacket_main.jpg",
+      "/images/mens_jacket_2.jpg",
+      "/images/mens_jacket_main.jpg",
+      "/images/mens_jacket_2.jpg",
+      "/images/mens_jacket_main.jpg",
+      "/images/mens_jacket_2.jpg",
+      "/images/mens_jacket_main.jpg",
+      "/images/mens_jacket_2.jpg",
+      "/images/mens_jacket_3.jpg"
     ]
   },
   {
@@ -84,9 +114,15 @@
     "description": "An elegant dress perfect for any occasion.",
     "mainImage": "images/womens_dress_main.jpg",
     "detailImages": [
-      "images/womens_dress_1.jpg",
-      "images/womens_dress_2.jpg",
-      "images/womens_dress_3.jpg"
+      "/images/mens_jacket_main.jpg",
+      "/images/mens_jacket_2.jpg",
+      "/images/mens_jacket_main.jpg",
+      "/images/mens_jacket_2.jpg",
+      "/images/mens_jacket_main.jpg",
+      "/images/mens_jacket_2.jpg",
+      "/images/mens_jacket_main.jpg",
+      "/images/mens_jacket_2.jpg",
+      "/images/mens_jacket_3.jpg"
     ]
   },
   {
@@ -99,9 +135,15 @@
     "description": "Classic and versatile denim jeans with a flattering fit.",
     "mainImage": "images/mens_jeans_main.jpg",
     "detailImages": [
-      "images/mens_jeans_1.jpg",
-      "images/mens_jeans_2.jpg",
-      "images/mens_jeans_3.jpg"
+      "/images/mens_jacket_main.jpg",
+      "/images/mens_jacket_2.jpg",
+      "/images/mens_jacket_main.jpg",
+      "/images/mens_jacket_2.jpg",
+      "/images/mens_jacket_main.jpg",
+      "/images/mens_jacket_2.jpg",
+      "/images/mens_jacket_main.jpg",
+      "/images/mens_jacket_2.jpg",
+      "/images/mens_jacket_3.jpg"
     ]
   },
   {
@@ -114,9 +156,15 @@
     "description": "A stylish and comfortable skirt for everyday wear.",
     "mainImage": "images/womens_skirt_main.jpg",
     "detailImages": [
-      "images/womens_skirt_1.jpg",
-      "images/womens_skirt_2.jpg",
-      "images/womens_skirt_3.jpg"
+      "/images/mens_jacket_main.jpg",
+      "/images/mens_jacket_2.jpg",
+      "/images/mens_jacket_main.jpg",
+      "/images/mens_jacket_2.jpg",
+      "/images/mens_jacket_main.jpg",
+      "/images/mens_jacket_2.jpg",
+      "/images/mens_jacket_main.jpg",
+      "/images/mens_jacket_2.jpg",
+      "/images/mens_jacket_3.jpg"
     ]
   },
   {
@@ -129,9 +177,15 @@
     "description": "Comfortable and durable sneakers for daily use.",
     "mainImage": "images/mens_sneakers_main.jpg",
     "detailImages": [
-      "images/mens_sneakers_1.jpg",
-      "images/mens_sneakers_2.jpg",
-      "images/mens_sneakers_3.jpg"
+      "/images/mens_jacket_main.jpg",
+      "/images/mens_jacket_2.jpg",
+      "/images/mens_jacket_main.jpg",
+      "/images/mens_jacket_2.jpg",
+      "/images/mens_jacket_main.jpg",
+      "/images/mens_jacket_2.jpg",
+      "/images/mens_jacket_main.jpg",
+      "/images/mens_jacket_2.jpg",
+      "/images/mens_jacket_3.jpg"
     ]
   },
   {
@@ -144,9 +198,15 @@
     "description": "Elegant heels for a sophisticated look.",
     "mainImage": "images/womens_heels_main.jpg",
     "detailImages": [
-      "images/womens_heels_1.jpg",
-      "images/womens_heels_2.jpg",
-      "images/womens_heels_3.jpg"
+      "/images/mens_jacket_main.jpg",
+      "/images/mens_jacket_2.jpg",
+      "/images/mens_jacket_main.jpg",
+      "/images/mens_jacket_2.jpg",
+      "/images/mens_jacket_main.jpg",
+      "/images/mens_jacket_2.jpg",
+      "/images/mens_jacket_main.jpg",
+      "/images/mens_jacket_2.jpg",
+      "/images/mens_jacket_3.jpg"
     ]
   }
 ]
