@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaHeart, FaStar } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import data from "../Components/data.json";
@@ -7,13 +7,22 @@ const ProductList = ({ activeFilter }) => {
   const navigate = useNavigate();
   const [favorites, setFavorites] = useState([]);
 
-  // Toggle favorite
+  // Load favorites from localStorage on component mount
+  useEffect(() => {
+    const savedFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
+    setFavorites(savedFavorites);
+  }, []);
+
+  // Toggle favorite and save to localStorage
   const toggleFavorite = (productId) => {
+    let updatedFavorites;
     if (favorites.includes(productId)) {
-      setFavorites(favorites.filter((id) => id !== productId));
+      updatedFavorites = favorites.filter((id) => id !== productId);
     } else {
-      setFavorites([...favorites, productId]);
+      updatedFavorites = [...favorites, productId];
     }
+    setFavorites(updatedFavorites);
+    localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
   };
 
   // Filter products based on activeFilter
