@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
   FaMapMarkerAlt,
   FaBell,
@@ -7,11 +7,11 @@ import {
   FaTshirt,
   FaShoppingBag,
   FaShoePrints,
-} from 'react-icons/fa';
-import { GiMonclerJacket, GiArmoredPants, GiClothes } from 'react-icons/gi';
+} from "react-icons/fa";
+import { GiMonclerJacket, GiArmoredPants, GiClothes } from "react-icons/gi";
 
 const Home = () => {
-  const [activeFilter, setActiveFilter] = useState('All'); // State to track active filter
+  const [activeFilter, setActiveFilter] = useState("All"); // State to track active filter
 
   return (
     <div className="p-4">
@@ -111,7 +111,12 @@ const Home = () => {
       <div className="mb-6 mt-10">
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-lg font-semibold">Flash Sales</h2>
-          <p className="text-sm text-[#704f38]">Closing in: 12:34:56</p>
+          <p className="text-sm text-[#704f38] flex items-center space-x-1">
+            Closing in:
+            <span className="bg-[#f7f2ed] rounded px-2 py-1 mx-2"> 12</span>:
+            <span className="bg-[#f7f2ed]  rounded px-2 py-1 mx-2">34</span>:
+            <span className="bg-[#f7f2ed]  rounded px-2 py-1 mx-2">56</span>
+          </p>
         </div>
         {/* Flash Sales Products (Placeholder) */}
         <div className="bg-gray-100 rounded-lg flex items-center justify-center">
@@ -121,13 +126,13 @@ const Home = () => {
 
       {/* Product Filters */}
       <div className="flex overflow-x-auto gap-2 mb-6">
-        {['All', 'Newest', 'Popular', 'Men', 'Women'].map((filter) => (
+        {["All", "Newest", "Popular", "Men", "Women"].map((filter) => (
           <button
             key={filter}
             className={`px-8 py-4 rounded-full transition-colors font-semibold text-xl border-2 border-gray-200 ${
               activeFilter === filter
-                ? 'bg-[#704f38] text-white'
-                : 'bg-gray-100 text-gray-700'
+                ? "bg-[#704f38] text-white"
+                : "bg-gray-100 text-gray-700"
             }`}
             onClick={() => setActiveFilter(filter)}
           >
