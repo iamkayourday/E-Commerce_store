@@ -19,6 +19,7 @@ import PaymentMethods from "./Pages/Profile/paymentMethods";
 import Orders from "./Pages/Profile/Orders";
 import Settings from  "./Pages/Profile/Settings";
 import ProtectedRoute from "./Components/ProtectedRoutes"; // Import the ProtectedRoute component
+import MyProfile from "./Pages/Profile/MyProfile";
 
 // Layout Component
 function Layout({ children }) {
@@ -88,6 +89,7 @@ function App() {
               <Route path="/payment-method" element={<PaymentMethods />} />
               <Route path="/my-orders" element={<Orders />} />
               <Route path="/settings" element={<Settings />} />
+              <Route path="/your-profile" element={<MyProfile/>} />
             </Route>
 
             {/* Fallback Route (e.g., 404 Not Found) */}

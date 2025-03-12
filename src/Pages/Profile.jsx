@@ -189,6 +189,7 @@ const Profile = () => {
           <FaChevronRight className="w-5 h-5 text-gray-400" />
         </div> */}
       </div>
+      <div className="mt-20"></div>
     </div>
   );
 };
