@@ -10,6 +10,7 @@ import {
 } from "react-icons/fa";
 import { GiMonclerJacket, GiArmoredPants, GiClothes } from "react-icons/gi";
 import ProductList from "../Components/ProductList";
+import { Link } from "react-router-dom";
 
 const Home = ({ favorites, toggleFavorite }) => {
   const [activeFilter, setActiveFilter] = useState("All"); // State to track active filter
@@ -25,13 +26,14 @@ const Home = ({ favorites, toggleFavorite }) => {
             <p className="text-sm font-semibold">New York, USA</p>
           </div>
         </div>
-
-        <div className="relative">
-          <FaBell className="text-gray-600 w-6 h-6" />
-          <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full px-1.5 py-0.5">
-            5
-          </span>
-        </div>
+        <Link to="/notification" className="text-[#704f38] text-sm">
+          <div className="relative">
+            <FaBell className="text-gray-600 w-6 h-6" />
+            <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full px-1.5 py-0.5">
+              5
+            </span>
+          </div>
+        </Link>
       </div>
 
       {/* Search Bar */}
@@ -151,7 +153,11 @@ const Home = ({ favorites, toggleFavorite }) => {
         }
       `}</style>
       {/* Pass activeFilter to ProductList */}
-      <ProductList favorites={favorites} toggleFavorite={toggleFavorite} activeFilter="All" />
+      <ProductList
+        favorites={favorites}
+        toggleFavorite={toggleFavorite}
+        activeFilter="All"
+      />
     </div>
   );
 };

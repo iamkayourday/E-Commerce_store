@@ -28,6 +28,7 @@ import AddCard from "./Checkout/AddCard";
 import Success from "./Checkout/Success";
 import HelpCenter from "./Pages/Profile/HelpCenter";
 import PasswordManager from "./Pages/Profile/PasswordManager";
+import Notification from "./Pages/Notification";
 
 // Layout Component
 function Layout({ children }) {
@@ -96,6 +97,8 @@ function AppContent() {
             <Route path="/favorites" element={<Favorites />} />
             <Route path="/messages" element={<Messages />} />
             <Route path="/details/:id" element={<ProductDetails />} />
+            <Route path="notification" element={<Notification />} />
+
 
             {/* Authentication Routes */}
             <Route path="/sign-in" element={<SignIn />} />
