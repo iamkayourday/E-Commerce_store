@@ -26,6 +26,7 @@ import Checkout from "./Checkout/Checkout";
 import Payment from "./Checkout/Payment";
 import AddCard from "./Checkout/AddCard";
 import Success from "./Checkout/Success";
+import HelpCenter from "./Pages/Profile/HelpCenter";
 
 // Layout Component
 function Layout({ children }) {
@@ -41,6 +42,7 @@ function Layout({ children }) {
     "/complete-verification",
     "/invite-friends",
     "/privacy-policy",
+    "/settings",
     "/payment-method",
     "/shipping-address",
     "/shipping-option",
@@ -48,6 +50,7 @@ function Layout({ children }) {
     "/payment",
     "/add-card",
     "/success",
+    "/help-center",
   ];
 
   return (
@@ -102,6 +105,7 @@ function App() {
               <Route path="/my-orders" element={<Orders />} />
               <Route path="/settings" element={<Settings />} />
               <Route path="/your-profile" element={<MyProfile/>} />
+              <Route path="/help-center" element={<HelpCenter />} />
             </Route>
 
             {/* Checkout */}
