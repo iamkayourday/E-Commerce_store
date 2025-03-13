@@ -1,15 +1,23 @@
-import React, { useState } from 'react';
-import { FaHeart, FaStar } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
-import data from '../Components/data.json'; // Import your data.json file
+import React, { useState, useEffect } from "react";
+import { FaHeart, FaStar } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+import data from "../Components/data.json";
 
 const Favorites = () => {
   const navigate = useNavigate();
   const [favorites, setFavorites] = useState([]);
 
-  // Toggle favorite
+  // Load favorites from localStorage on component mount
+  useEffect(() => {
+    const savedFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
+    setFavorites(savedFavorites);
+  }, []);
+
+  // Toggle favorite and save to localStorage
   const toggleFavorite = (productId) => {
-    setFavorites(favorites.filter((id) => id !== productId));
+    const updatedFavorites = favorites.filter((id) => id !== productId);
+    setFavorites(updatedFavorites);
+    localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
   };
 
   // Filter products to show only favorites
@@ -33,7 +41,7 @@ const Favorites = () => {
                   onClick={() => toggleFavorite(product.id)}
                   className="absolute top-2 right-2 bg-white bg-opacity-75 p-2 rounded-full"
                 >
-                  <FaHeart className="w-5 h-5 text-red-500" />
+                  <FaHeart className="w-5 h-5 text-[#704f38]" />
                 </button>
               </div>
 
