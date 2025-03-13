@@ -29,6 +29,8 @@ import Success from "./Checkout/Success";
 import HelpCenter from "./Pages/Profile/HelpCenter";
 import PasswordManager from "./Pages/Profile/PasswordManager";
 import Notification from "./Pages/Notification";
+import MessageList from "./Pages/Message/MessageList";
+import MessageDetails from "./Pages/Message/Messagedetails";
 
 // Layout Component
 function Layout({ children }) {
@@ -54,6 +56,9 @@ function Layout({ children }) {
     "/success",
     "/help-center",
     "/password-manager",
+    "/messages",
+    "/message/:id",
+    
   ];
 
   return (
@@ -95,7 +100,8 @@ function AppContent() {
             <Route path="/" element={<Home />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/favorites" element={<Favorites />} />
-            <Route path="/messages" element={<Messages />} />
+            <Route path="/messages" element={<MessageList />} />
+            <Route path="/message/:id" element={<MessageDetails />} />
             <Route path="/details/:id" element={<ProductDetails />} />
             <Route path="notification" element={<Notification />} />
 
