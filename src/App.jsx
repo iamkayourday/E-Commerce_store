@@ -17,7 +17,7 @@ import InviteFriends from "./Pages/Profile/InviteFriends";
 import PrivacyPolicy from "./Pages/Profile/PrivacyPolicy";
 import PaymentMethods from "./Pages/Profile/paymentMethods";
 import Orders from "./Pages/Profile/Orders";
-import Settings from  "./Pages/Profile/Settings";
+import Settings from "./Pages/Profile/Settings";
 import ProtectedRoute from "./Components/ProtectedRoutes"; // Import the ProtectedRoute component
 import MyProfile from "./Pages/Profile/MyProfile";
 import Shipping from "./Checkout/Shipping";
@@ -27,6 +27,7 @@ import Payment from "./Checkout/Payment";
 import AddCard from "./Checkout/AddCard";
 import Success from "./Checkout/Success";
 import HelpCenter from "./Pages/Profile/HelpCenter";
+import PasswordManager from "./Pages/Profile/PasswordManager";
 
 // Layout Component
 function Layout({ children }) {
@@ -51,6 +52,7 @@ function Layout({ children }) {
     "/add-card",
     "/success",
     "/help-center",
+    "/password-manager",
   ];
 
   return (
@@ -63,21 +65,27 @@ function Layout({ children }) {
 }
 
 // Main App Component
-function App() {
+function AppContent() {
   const [showSplash, setShowSplash] = useState(true);
+  const location = useLocation();
 
   useEffect(() => {
-    // Hide the splash screen after 1 second
-    const timer = setTimeout(() => {
-      setShowSplash(false);
-    }, 1000); // 1 second
+    // Hide the splash screen after 1 second only if the route is "/"
+    if (location.pathname === "/") {
+      const timer = setTimeout(() => {
+        setShowSplash(false);
+      }, 1000); // 1 second
 
-    return () => clearTimeout(timer);
-  }, []);
+      return () => clearTimeout(timer);
+    } else {
+      setShowSplash(false); // Ensure splash is hidden for other routes
+    }
+  }, [location.pathname]);
 
   return (
-    <Router>
-      {showSplash ? (
+    <>
+      {/* Show Splash only on the root route */}
+      {showSplash && location.pathname === "/" ? (
         <Splash />
       ) : (
         <Layout>
@@ -104,8 +112,9 @@ function App() {
               <Route path="/payment-method" element={<PaymentMethods />} />
               <Route path="/my-orders" element={<Orders />} />
               <Route path="/settings" element={<Settings />} />
-              <Route path="/your-profile" element={<MyProfile/>} />
+              <Route path="/your-profile" element={<MyProfile />} />
               <Route path="/help-center" element={<HelpCenter />} />
+              <Route path="/password-manager" element={<PasswordManager />} />
             </Route>
 
             {/* Checkout */}
@@ -121,6 +130,15 @@ function App() {
           </Routes>
         </Layout>
       )}
+    </>
+  );
+}
+
+// Wrapper for Router
+function App() {
+  return (
+    <Router>
+      <AppContent />
     </Router>
   );
 }
