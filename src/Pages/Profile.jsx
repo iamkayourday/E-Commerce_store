@@ -164,7 +164,7 @@ const Profile = () => {
         <div
           className="flex items-center justify-between p-4 bg-white rounded-lg shadow-sm cursor-pointer hover:bg-gray-50 transition-colors"
           onClick={() => {
-            localStorage.removeItem("userProfile");
+            // localStorage.removeItem("userProfile");
             navigate("/sign-in");
           }}
         >
@@ -175,19 +175,7 @@ const Profile = () => {
           <FaChevronRight className="w-5 h-5 text-gray-400" />
         </div>
 
-        {/* <div
-          className="flex items-center justify-between p-4 bg-white rounded-lg shadow-sm cursor-pointer hover:bg-gray-50 transition-colors"
-          onClick={() => {
-            localStorage.removeItem("userProfile");
-            navigate("/login");
-          }}
-        >
-          <div className="flex items-center space-x-4">
-            <FaSignOutAlt className="w-6 h-6 text-red-600" />
-            <span className="text-red-600">Log Out</span>
-          </div>
-          <FaChevronRight className="w-5 h-5 text-gray-400" />
-        </div> */}
+       
       </div>
       <div className="mt-20"></div>
     </div>

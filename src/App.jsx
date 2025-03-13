@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 import BottomHeader from "./Components/BottomHeader";
 import Home from "./Pages/Home";
 import Cart from "./Pages/Cart";
@@ -31,6 +36,7 @@ import PasswordManager from "./Pages/Profile/PasswordManager";
 import Notification from "./Pages/Notification";
 import MessageList from "./Pages/Message/MessageList";
 import MessageDetails from "./Pages/Message/Messagedetails";
+import Order from "./Pages/Order";
 
 // Layout Component
 function Layout({ children }) {
@@ -48,6 +54,7 @@ function Layout({ children }) {
     "/privacy-policy",
     "/settings",
     "/payment-method",
+    "/my-orders",
     "/shipping-address",
     "/shipping-option",
     "/checkout",
@@ -58,13 +65,23 @@ function Layout({ children }) {
     "/password-manager",
     "/messages",
     "/message/:id",
-    
+    "/details/:id", // Add this for dynamic routes
   ];
+
+  // Check if the current route should hide the BottomHeader
+  const shouldHideBottomHeader = hideBottomHeaderRoutes.some((route) => {
+    // Handle dynamic routes (e.g., /details/:id)
+    if (route.includes(":id")) {
+      return location.pathname.startsWith(route.split(":id")[0]);
+    }
+    // Handle exact matches for static routes
+    return location.pathname === route;
+  });
 
   return (
     <>
       {/* Render BottomHeader only if the current route is not in hideBottomHeaderRoutes */}
-      {!hideBottomHeaderRoutes.includes(location.pathname) && <BottomHeader />}
+      {!shouldHideBottomHeader && <BottomHeader />}
       <div className="pb-16">{children}</div>
     </>
   );
@@ -100,18 +117,18 @@ function AppContent() {
             <Route path="/" element={<Home />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/favorites" element={<Favorites />} />
-            <Route path="/messages" element={<MessageList />} />
-            <Route path="/message/:id" element={<MessageDetails />} />
             <Route path="/details/:id" element={<ProductDetails />} />
             <Route path="notification" element={<Notification />} />
-
 
             {/* Authentication Routes */}
             <Route path="/sign-in" element={<SignIn />} />
             <Route path="/sign-up" element={<CreateAccount />} />
             <Route path="/verification" element={<VerifyCode />} />
             <Route path="/password" element={<NewPassword />} />
-            <Route path="/complete-verification" element={<CompleteProfile />} />
+            <Route
+              path="/complete-verification"
+              element={<CompleteProfile />}
+            />
 
             {/* Protected Routes */}
             <Route element={<ProtectedRoute />}>
@@ -119,11 +136,13 @@ function AppContent() {
               <Route path="/invite-friends" element={<InviteFriends />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/payment-method" element={<PaymentMethods />} />
-              <Route path="/my-orders" element={<Orders />} />
+              <Route path="/my-orders" element={<Order />} />
               <Route path="/settings" element={<Settings />} />
               <Route path="/your-profile" element={<MyProfile />} />
               <Route path="/help-center" element={<HelpCenter />} />
               <Route path="/password-manager" element={<PasswordManager />} />
+              <Route path="/messages" element={<MessageList />} />
+              <Route path="/message/:id" element={<MessageDetails />} />
             </Route>
 
             {/* Checkout */}
