@@ -1,6 +1,7 @@
 # E-Commerce Web Application
 
-This is a fully functional e-commerce web application  built with **React**, **React Router**, and **Tailwind CSS**. It includes features like user authentication, product browsing, cart management, checkout, and more. The application is designed to be responsive and user-friendly.
+This is a fully functional e-commerce web application built with **React**, **React Router**, and **Tailwind CSS**. It includes features like user authentication, product browsing, cart management, checkout, and more. The application is designed with a **mobile-first approach**, ensuring a responsive and user-friendly experience on mobile devices.
+
 
 ---
 
