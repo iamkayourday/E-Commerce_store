@@ -30,7 +30,7 @@ const Home = ({ favorites, toggleFavorite }) => {
           <div className="relative">
             <FaBell className="text-gray-600 w-6 h-6" />
             <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full px-1.5 py-0.5">
-              5
+              8
             </span>
           </div>
         </Link>
